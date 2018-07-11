@@ -5,7 +5,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           {
@@ -14,12 +14,13 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
               importLoaders: 1,
-              localIdentName: '[name]_[local]_[hash:base64]',
               sourceMap: true,
               minimize: true
             }
+          },
+          {
+            loader: 'sass-loader'
           },
           {
             loader: 'postcss-loader'

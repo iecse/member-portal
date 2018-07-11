@@ -1,13 +1,14 @@
 {
   "parser": "babel-eslint",
-  "rules": {},
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb-base"
-  ],
-  "plugins": [
-    "react"
-  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-underscore-dangle": [
+      "error",
+      { "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }
+    ]
+  },
+  "extends": ["plugin:react/recommended", "airbnb-base", "prettier"],
+  "plugins": ["react", "prettier"],
   "env": {
     "browser": true
   }

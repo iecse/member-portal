@@ -1,0 +1,10 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.jsx": "javascript"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
+}
