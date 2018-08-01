@@ -5,10 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import routes from '../routes';
 import store from '../store';
 import './app.scss';
+import Navbar from '../modules/Navbar';
+import Snackbar from '../modules/Snackbar';
 
 const App = () => (
   <Provider store={store}>
     <div>
+      <Navbar />
       <Router>
         <Switch>
           {routes.map(route => (
@@ -21,6 +24,7 @@ const App = () => (
           ))}
         </Switch>
       </Router>
+      <Snackbar />
     </div>
   </Provider>
 );

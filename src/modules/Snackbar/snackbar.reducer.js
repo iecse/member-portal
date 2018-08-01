@@ -1,11 +1,13 @@
 import reducer from '../../utils/reducer';
 
 const actionHandlers = {
-  SET_LOGGED_IN: (s, a) => ({ ...s, loggedIn: a.payload })
+  SET_SNACKBAR: (s, a) => ({ ...s, ...a.payload }),
+  CLEAR_SNACKBAR: s => ({ ...s, ...initialState })
 };
 
 const initialState = {
-  loggedIn: false
+  message: null,
+  type: 'success'
 };
 
 export default reducer(initialState, actionHandlers);

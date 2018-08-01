@@ -1,11 +1,13 @@
 import reducer from '../../utils/reducer';
 
 const actionHandlers = {
-  SET_LOGGED_IN: (s, a) => ({ ...s, loggedIn: a.payload })
+  FETCH_REGISTRATION_DETAILS_SUCCESS: (s, a) => ({ ...s, ...a.payload })
 };
 
 const initialState = {
-  loggedIn: false
+  memId: '',
+  name: '',
+  email: ''
 };
 
 export default reducer(initialState, actionHandlers);

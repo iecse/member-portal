@@ -1,11 +1,11 @@
 import reducer from '../../utils/reducer';
 
 const actionHandlers = {
-  SET_LOGGED_IN: (s, a) => ({ ...s, loggedIn: a.payload })
+  FETCH_UPCOMING_EVENTS_SUCCESS: (s, a) => ({ ...s, upcoming: a.payload })
 };
 
 const initialState = {
-  loggedIn: false
+  upcoming: []
 };
 
 export default reducer(initialState, actionHandlers);

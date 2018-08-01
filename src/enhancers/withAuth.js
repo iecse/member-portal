@@ -1,17 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { pick, compose } from 'ramda';
 
 const Loading = () => <div>Loading</div>;
-export default (Component, authRequired = true) =>
+
+const mapDispatchToProps = () => ({});
+
+const mapStateToProps = state => ({
+  ...pick(['loggedIn'], state.login)
+});
+
+const connector = Component =>
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Component);
+
+const withAuth = (Component, authRequired = true) =>
   class withAuthHOC extends React.Component {
     state = {
       start: false
     };
 
     static propTypes = {
-      loggedIn: PropTypes.bool,
-      history: PropTypes.object
+      loggedIn: PropTypes.bool.isRequired,
+      history: PropTypes.object.isRequired
     };
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+      if (nextProps.loggedIn === prevState.start) return null;
+      if (!nextProps.loggedIn && authRequired) nextProps.history.push('/login');
+      else if (nextProps.loggedIn && !authRequired) nextProps.history.push('/');
+      return { start: true };
+    }
 
     componentDidMount() {
       if (!this.props.loggedIn && authRequired)
@@ -21,5 +43,11 @@ export default (Component, authRequired = true) =>
       else this.setState({ start: true });
     }
 
-    render = () => (this.state.start ? <Component /> : <Loading />);
+    render = () =>
+      this.state.start ? <Component {...this.props} /> : <Loading />;
   };
+
+export default compose(
+  connector,
+  withAuth
+);

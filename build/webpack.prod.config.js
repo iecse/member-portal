@@ -1,6 +1,8 @@
 const CompressionPlugin = require('compression-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+process.env.NODE_ENV = 'production';
 
 module.exports = {
   mode: 'production',
@@ -39,8 +41,8 @@ module.exports = {
       root: __dirname + '/..'
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].[hash].css",
-      chunkFilename: "[id].[hash].css"
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
     }),
     new CompressionPlugin({
       asset: '[path].gz[query]',

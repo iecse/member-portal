@@ -3,6 +3,7 @@ import withAuth from '../enhancers/withAuth';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
+import Events from './Events';
 
 export default [
   {
@@ -14,6 +15,11 @@ export default [
     name: 'Register',
     pathname: '/register',
     component: withAuth(Register, false)
+  },
+  {
+    name: 'Events',
+    pathname: '/events',
+    component: withAuth(Events)
   },
   {
     name: 'Home',
