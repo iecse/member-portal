@@ -25,7 +25,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
+    alias: {
+      Src: path.resolve(__dirname, '../src/'),
+      Config: path.resolve(__dirname, '../config/')
+    }
   },
   devServer: {
     historyApiFallback: true

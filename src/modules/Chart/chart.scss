@@ -1,0 +1,13 @@
+.chart-container {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+}

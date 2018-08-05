@@ -1,9 +1,10 @@
 import { all, put } from 'redux-saga/effects';
-import { registerSaga } from '../routes/Register';
-import { loginSaga } from '../routes/Login';
-import { eventsSaga } from '../routes/Events';
-import { navbarSaga } from '../modules/Navbar';
-import { action } from '../utils';
+import { registerSaga } from 'Src/routes/Register';
+import { loginSaga } from 'Src/routes/Login';
+import { homeSaga } from 'Src/routes/Home';
+import { eventsSaga } from 'Src/routes/Events';
+import { navbarSaga } from 'Src/modules/Navbar';
+import { action } from 'Src/utils';
 
 function* init() {
   if (JSON.parse(localStorage.getItem('auth')))
@@ -12,7 +13,14 @@ function* init() {
 }
 
 export function* rootSaga() {
-  yield all([init(), registerSaga(), loginSaga(), eventsSaga(), navbarSaga()]);
+  yield all([
+    init(),
+    registerSaga(),
+    loginSaga(),
+    homeSaga(),
+    eventsSaga(),
+    navbarSaga()
+  ]);
 }
 
 export default rootSaga;

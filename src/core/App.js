@@ -2,17 +2,17 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import routes from '../routes';
-import store from '../store';
+import routes from 'Src/routes';
+import store from 'Src/store';
 import './app.scss';
-import Navbar from '../modules/Navbar';
-import Snackbar from '../modules/Snackbar';
+import Navbar from 'Src/modules/Navbar';
+import Snackbar from 'Src/modules/Snackbar';
 
 const App = () => (
   <Provider store={store}>
-    <div>
-      <Navbar />
-      <Router>
+    <Router>
+      <div>
+        <Navbar />
         <Switch>
           {routes.map(route => (
             <Route
@@ -23,9 +23,9 @@ const App = () => (
             />
           ))}
         </Switch>
-      </Router>
-      <Snackbar />
-    </div>
+        <Snackbar />
+      </div>
+    </Router>
   </Provider>
 );
 

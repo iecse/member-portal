@@ -1,4 +1,4 @@
-import reducer from '../../utils/reducer';
+import reducer from 'Src/utils/reducer';
 
 const actionHandlers = {
   FETCH_UPCOMING_EVENTS_SUCCESS: (s, a) => ({ ...s, upcoming: a.payload })

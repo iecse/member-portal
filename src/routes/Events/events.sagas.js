@@ -1,5 +1,5 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
-import { request, action } from '../../utils';
+import { request, action } from 'Src/utils';
 
 function* fetchUpcomingEvents() {
   const data = yield call(request, '/events/upcoming');

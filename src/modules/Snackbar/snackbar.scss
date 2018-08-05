@@ -1,0 +1,27 @@
+.snackbar {
+  color: white;
+  position: fixed;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  border-radius: 1px;
+  font-weight: 400;
+
+  &.info {
+    background: #47bfdb;
+  }
+
+  &.danger {
+    background: #e05454;
+  }
+
+  &.success {
+    background: #4eb662;
+  }
+
+  &.shown {
+    transition: transform 0.2s ease;
+    transform: translate(-50%, -70px);
+  }
+}

@@ -1,12 +1,34 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 const Navbar = props =>
-  props.loggedIn ? <button onClick={props.logout}>Logout</button> : <div />;
+  props.loggedIn ? (
+    <div>
+      <button onClick={props.logout}>Logout</button>
+      <button
+        onClick={() => {
+          props.history.push('/');
+        }}
+      >
+        Home
+      </button>
+      <button
+        onClick={() => {
+          props.history.push('/events');
+        }}
+      >
+        Events
+      </button>
+    </div>
+  ) : (
+    <div />
+  );
 
 Navbar.propTypes = {
-  loggedIn: Proptypes.bool.isRequired,
-  logout: Proptypes.func.isRequired
+  loggedIn: PropTypes.bool.isRequired,
+  logout: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 };
 
-export default Navbar;
+export default withRouter(Navbar);

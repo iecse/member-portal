@@ -30,9 +30,7 @@ module.exports = {
     ]
   },
   devtool: 'inline-source-map',
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     hot: true
   }

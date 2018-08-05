@@ -1,4 +1,4 @@
-import reducer from '../../utils/reducer';
+import reducer from 'Src/utils/reducer';
 
 const actionHandlers = {
   SET_SNACKBAR: (s, a) => ({ ...s, ...a.payload }),
@@ -7,7 +7,7 @@ const actionHandlers = {
 
 const initialState = {
   message: null,
-  type: 'success'
+  type: 'info'
 };
 
 export default reducer(initialState, actionHandlers);

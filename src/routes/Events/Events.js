@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Event from 'Src/components/Event';
 
 class Events extends Component {
   static propTypes = {
@@ -16,9 +17,7 @@ class Events extends Component {
       <div>
         Events
         <div>
-          {this.props.upcoming.map((event, i) => (
-            <div key={i}>{event.name}</div>
-          ))}
+          {this.props.upcoming.map((event, i) => <Event {...event} key={i} />)}
         </div>
       </div>
     );

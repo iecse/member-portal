@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
-import { loginReducer } from '../routes/Login';
-import { registerReducer } from '../routes/Register';
-import { eventsReducer } from '../routes/Events';
-import { snackbarReducer } from '../modules/Snackbar';
+import { loginReducer } from 'Src/routes/Login';
+import { registerReducer } from 'Src/routes/Register';
+import { homeReducer } from 'Src/routes/Home';
+import { eventsReducer } from 'Src/routes/Events';
+import { snackbarReducer } from 'Src/modules/Snackbar';
 
 export default combineReducers({
   login: loginReducer,
   register: registerReducer,
   snackbar: snackbarReducer,
-  events: eventsReducer
+  events: eventsReducer,
+  home: homeReducer
 });

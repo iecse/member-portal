@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { pick } from 'ramda';
 import Register from './Register';
-import action from '../../utils/action';
+import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
   getRegistrationDetails: payload =>

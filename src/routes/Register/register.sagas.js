@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
-import { request, action } from '../../utils';
+import { request, action } from 'Src/utils';
 
 function* getRegistrationDetails({ payload }) {
   const data = yield call(request, '/register?token=' + payload.token);

@@ -1,0 +1,42 @@
+@import 'Src/core/common.scss';
+
+#login-page {
+  .login-container {
+    background: #333;
+    height: 450px;
+    width: gr(450px);
+    display: grid;
+    grid-template-columns: gr(1fr) 1fr;
+
+    .login-details {
+      background: #eeeeee;
+      padding: 20px;
+    }
+
+    .login-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      & > div {
+        width: 100%;
+      }
+
+      input,
+      button {
+        width: 100%;
+        border: none;
+        padding: 15px 15px;
+        font-weight: 300;
+        margin: 5px 0;
+        background: #eeeeee;
+      }
+
+      button {
+        cursor: pointer;
+        font-weight: 400;
+      }
+    }
+  }
+}

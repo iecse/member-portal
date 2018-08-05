@@ -1,5 +1,5 @@
 import 'whatwg-fetch';
-import { api } from '../../config/endpoints';
+import { api } from 'Config/endpoints';
 
 export default (route, data = null, endpoint = api) => {
   process.env.NODE_ENV === 'development' &&

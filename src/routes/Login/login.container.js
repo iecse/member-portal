@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Login from './Login';
-import action from '../../utils/action';
+import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
   login: payload => dispatch(action('FETCH_LOGIN_BEGIN', payload))

@@ -1,4 +1,4 @@
-import reducer from '../../utils/reducer';
+import reducer from 'Src/utils/reducer';
 
 const actionHandlers = {
   SET_LOGGED_IN: (s, a) => ({ ...s, loggedIn: a.payload })

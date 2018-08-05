@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { pick } from 'ramda';
 import Events from './Events';
-import action from '../../utils/action';
+import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
   fetchUpcomingEvents: () => dispatch(action('FETCH_UPCOMING_EVENTS_BEGIN'))

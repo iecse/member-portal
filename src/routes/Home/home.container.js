@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import { pick } from 'ramda';
-import { action } from 'Src/utils';
-import Navbar from './Navbar';
+import Home from './Home';
+import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(action('FETCH_LOGOUT_BEGIN'))
+  getUserDetails: () => dispatch(action('FETCH_HOME_DATA_BEGIN'))
 });
 
 const mapStateToProps = state => ({
-  ...pick(['loggedIn'], state.login)
+  ...pick(['userDetails', 'grid', 'content'], state.home)
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Navbar);
+)(Home);

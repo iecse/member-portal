@@ -1,4 +1,4 @@
-import withAuth from '../enhancers/withAuth';
+import withAuth from 'Src/enhancers/withAuth';
 
 import Login from './Login';
 import Register from './Register';
