@@ -1,4 +1,9 @@
-.home-grid {
-  display: grid;
+#home-page {
   width: 100%;
+
+  .home-grid {
+    width: 100%;
+    display: grid;
+    justify-items: stretch;
+  }
 }

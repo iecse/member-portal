@@ -1,5 +1,7 @@
+@import 'Src/core/common.scss';
+
 .snackbar {
-  color: white;
+  color: $color-light;
   position: fixed;
   bottom: -50px;
   left: 50%;
@@ -9,15 +11,15 @@
   font-weight: 400;
 
   &.info {
-    background: #47bfdb;
+    background: $color-info;
   }
 
   &.danger {
-    background: #e05454;
+    background: $color-danger;
   }
 
   &.success {
-    background: #4eb662;
+    background: $color-success;
   }
 
   &.shown {

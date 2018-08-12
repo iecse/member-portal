@@ -3,9 +3,7 @@ import { delay } from 'redux-saga';
 import { request, action } from 'Src/utils';
 
 function* logout() {
-  console.log('asdasd');
   const data = yield call(request, '/logout');
-  console.log(data);
   if (data.success) {
     yield put(action('SET_SNACKBAR', { type: 'success', message: data.msg }));
     localStorage.setItem('auth', false);

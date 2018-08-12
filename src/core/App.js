@@ -2,7 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import routes from 'Src/routes';
+import routes from '../routes';
 import store from 'Src/store';
 import './app.scss';
 import Navbar from 'Src/modules/Navbar';
@@ -11,7 +11,7 @@ import Snackbar from 'Src/modules/Snackbar';
 const App = () => (
   <Provider store={store}>
     <Router>
-      <div>
+      <div className="app-container">
         <Navbar />
         <Switch>
           {routes.map(route => (

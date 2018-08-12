@@ -2,14 +2,14 @@
 
 #login-page {
   .login-container {
-    background: #333;
+    background: $color-dark;
     height: 450px;
     width: gr(450px);
     display: grid;
     grid-template-columns: gr(1fr) 1fr;
 
     .login-details {
-      background: #eeeeee;
+      background: $color-light;
       padding: 20px;
     }
 
@@ -30,7 +30,7 @@
         padding: 15px 15px;
         font-weight: 300;
         margin: 5px 0;
-        background: #eeeeee;
+        background: $color-light;
       }
 
       button {

@@ -3,14 +3,14 @@ import { delay } from 'redux-saga';
 import { request, action } from 'Src/utils';
 
 function* getRegistrationDetails({ payload }) {
-  const data = yield call(request, '/register?token=' + payload.token);
+  const data = yield call(request, '/gettokendetails?token=' + payload.token);
   if (data.success)
     yield put(action('FETCH_REGISTRATION_DETAILS_SUCCESS', data.data));
   else yield payload.push('/login');
 }
 
 function* setPassword({ payload }) {
-  const data = yield call(request, '/register', {
+  const data = yield call(request, '/setpassword', {
     password: payload.password,
     token: payload.token
   });

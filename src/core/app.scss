@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import 'Src/core/common.scss';
 
 * {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -8,7 +9,7 @@
 
 body {
   margin: 0;
-  background-color: #FBFBFB;
+  background-color: $background-light;
 }
 
 .full-page-centered {
@@ -17,4 +18,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.app-container {
+  display: flex;
 }
