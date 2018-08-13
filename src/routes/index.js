@@ -1,9 +1,8 @@
 import withAuth from 'Src/enhancers/withAuth';
-
 import Login from './Login';
 import Register from './Register';
-import Home from './Home';
 import Events from './Events';
+import Home from './Home';
 
 export default [
   {

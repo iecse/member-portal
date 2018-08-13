@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { pick, compose } from 'ramda';
 
-const Loading = () => <div>Loading</div>;
-
 const mapDispatchToProps = () => ({});
 
 const mapStateToProps = state => ({
@@ -43,8 +41,7 @@ const withAuth = (Component, authRequired = true) =>
       else this.setState({ start: true });
     }
 
-    render = () =>
-      this.state.start ? <Component {...this.props} /> : <Loading />;
+    render = () => (this.state.start ? <Component {...this.props} /> : null);
   };
 
 export default compose(

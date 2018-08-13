@@ -34,7 +34,8 @@ module.exports = {
     ]
   },
   output: {
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].bundle.js',
+    chunkFilename: '[name].[chunkhash].bundle.js'
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {
