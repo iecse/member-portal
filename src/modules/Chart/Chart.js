@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { request } from 'Src/utils';
 import { charts } from 'Config/endpoints';
+import Loader from 'Src/components/Loader';
 import './chart.scss';
 
 class Chart extends Component {
@@ -24,7 +25,7 @@ class Chart extends Component {
         {this.state.id ? (
           <iframe scrolling="no" src={charts + '/r/' + this.state.id} />
         ) : (
-          <div>Loading...</div>
+          <Loader />
         )}
       </div>
     );
