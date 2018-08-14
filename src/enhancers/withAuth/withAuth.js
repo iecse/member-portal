@@ -6,7 +6,7 @@ import { pick, compose } from 'ramda';
 const mapDispatchToProps = () => ({});
 
 const mapStateToProps = state => ({
-  ...pick(['loggedIn'], state.login)
+  ...pick(['loggedIn'], state.common)
 });
 
 const connector = Component =>

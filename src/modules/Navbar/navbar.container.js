@@ -8,7 +8,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  ...pick(['loggedIn'], state.login)
+  ...pick(['loggedIn'], state.common)
 });
 
 export default connect(

@@ -10,6 +10,7 @@ function* login({ payload }) {
   if (data.success) {
     yield put(action('SET_SNACKBAR', { type: 'success', message: data.msg }));
     localStorage.setItem('auth', true);
+    yield put(action('FETCH_USER_DATA_SUCCESS', data.data));
     yield put(action('SET_LOGGED_IN', true));
     yield payload.push('/');
   } else

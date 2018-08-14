@@ -5,11 +5,6 @@ const actionHandlers = {
 };
 
 const initialState = {
-  userDetails: {
-    memId: '',
-    name: '',
-    email: ''
-  },
   grid: {
     areas: '',
     rows: '',
