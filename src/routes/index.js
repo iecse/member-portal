@@ -3,6 +3,7 @@ import Login from './Login';
 import Register from './Register';
 import Events from './Events';
 import Home from './Home';
+import Admin from './Admin';
 
 export default [
   {
@@ -19,6 +20,11 @@ export default [
     name: 'Events',
     pathname: '/events',
     component: withAuth(Events)
+  },
+  {
+    name: 'Admin',
+    pathname: '/admin',
+    component: withAuth(Admin, true, 2)
   },
   {
     name: 'Home',

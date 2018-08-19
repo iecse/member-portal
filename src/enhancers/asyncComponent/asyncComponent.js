@@ -6,10 +6,15 @@ const asyncComponent = importComponent =>
       component: null
     };
 
-    async componentDidMount() {
+    componentDidMount() {
+      this.mounted = true;
       importComponent().then(cmp => {
-        this.setState({ component: cmp.default });
+        if (this.mounted) this.setState({ component: cmp.default });
       });
+    }
+
+    componentWillUnmount() {
+      this.mounted = false;
     }
 
     render() {

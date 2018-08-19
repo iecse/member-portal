@@ -1,6 +1,14 @@
 @import 'Src/core/common.scss';
 
 #login-page {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: cornflowerblue;
+
   .login-container {
     background: $color-dark;
     height: 450px;

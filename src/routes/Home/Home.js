@@ -15,7 +15,8 @@ class Home extends Component {
     grid: PropTypes.shape({
       areas: PropTypes.string.isRequired,
       rows: PropTypes.string.isRequired,
-      columns: PropTypes.string.isRequired
+      columns: PropTypes.string.isRequired,
+      gridGap: PropTypes.string
     }),
     content: PropTypes.arrayOf(
       PropTypes.shape({
@@ -49,7 +50,8 @@ class Home extends Component {
           style={{
             gridTemplateAreas: this.props.grid.areas,
             gridTemplateRows: this.props.grid.rows,
-            gridTemplateColumns: this.props.grid.columns
+            gridTemplateColumns: this.props.grid.columns,
+            gridGap: this.props.grid.gridGap
           }}
           className="home-grid"
         >
@@ -58,17 +60,21 @@ class Home extends Component {
               key={i}
               style={{
                 gridArea: template.area,
-                height: template.height
+                height: template.height,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
               }}
             >
               <div
                 style={{
-                  width: template.width,
+                  minWidth: template.width + 40,
                   height: template.height
                 }}
+                className="template-container"
               >
                 {template.type === 'chart' ? (
-                  <Chart route={template.route} />
+                  <Chart width={template.width} route={template.route} />
                 ) : (
                   <div />
                 )}
