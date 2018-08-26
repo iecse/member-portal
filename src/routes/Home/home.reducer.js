@@ -5,11 +5,6 @@ const actionHandlers = {
 };
 
 const initialState = {
-  grid: {
-    areas: '',
-    rows: '',
-    columns: ''
-  },
   content: []
 };
 

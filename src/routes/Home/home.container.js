@@ -8,8 +8,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  ...pick(['grid', 'content'], state.home),
-  ...pick(['userDetails'], state.common)
+  ...pick(['content'], state.home)
 });
 
 export default connect(

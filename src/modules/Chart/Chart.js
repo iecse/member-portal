@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { request } from 'Src/utils';
 import { charts } from 'Config/endpoints';
-import Loader from 'Src/components/Loader';
+import Loader from 'Src/modules/Loader';
 import './chart.scss';
 
 class Chart extends Component {

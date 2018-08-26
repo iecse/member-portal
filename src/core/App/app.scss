@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
 @import 'Src/core/common.scss';
 
 * {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-weight: 300;
   box-sizing: border-box;
 }
@@ -10,15 +10,4 @@
 body {
   margin: 0;
   background-color: $background-light;
-}
-
-.app-container {
-  display: flex;
-  max-width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
-
-  .scroll-contanier {
-    overflow-y: scroll;
-  }
 }

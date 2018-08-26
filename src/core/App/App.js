@@ -13,18 +13,16 @@ const App = () => (
     <Router>
       <div className="app-container">
         <Navbar />
-        <div className="scroll-contanier">
-          <Switch>
-            {routes.map(route => (
-              <Route
-                exact
-                key={route.pathname}
-                path={route.pathname}
-                component={route.component}
-              />
-            ))}
-          </Switch>
-        </div>
+        <Switch>
+          {routes.map(route => (
+            <Route
+              exact
+              key={route.pathname}
+              path={route.pathname}
+              component={route.component}
+            />
+          ))}
+        </Switch>
         <Snackbar />
       </div>
     </Router>

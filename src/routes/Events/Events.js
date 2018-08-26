@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Event from 'Src/components/Event';
+import Event from 'Src/modules/Event';
 
 class Events extends Component {
   static propTypes = {

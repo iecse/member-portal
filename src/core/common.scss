@@ -1,10 +1,13 @@
-$color-primary: #89adef;
+$color-primary: #4500c1;
 $color-info: #47bfdb;
 $color-success: #4eb662;
 $color-danger: #e05454;
 $color-light: #eeeeee;
 $color-dark: #333333;
 $background-light: #fbfbfb;
+$color-text-light: #ffffff;
+$radius: 7px;
+$card-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
 
 @function gr($length) {
   @return $length * 1.61803398875;
