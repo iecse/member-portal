@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { pick } from 'ramda';
-import Register from './Register';
+import NewUser from './NewUser';
 import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
@@ -12,10 +12,10 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  ...pick(['memId', 'name', 'email'], state.register)
+  ...pick(['memId', 'name', 'email'], state.newUser)
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Register);
+)(NewUser);

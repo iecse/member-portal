@@ -1,5 +1,5 @@
 import { all, put, call } from 'redux-saga/effects';
-import { registerSaga } from 'Src/routes/Register';
+import { newUserSaga } from 'Src/routes/NewUser';
 import { adminSaga } from 'Src/routes/Admin';
 import { loginSaga } from 'Src/routes/Login';
 import { homeSaga } from 'Src/routes/Home';
@@ -22,7 +22,7 @@ function* init() {
 export function* rootSaga() {
   yield all([
     init(),
-    registerSaga(),
+    newUserSaga(),
     loginSaga(),
     homeSaga(),
     eventsSaga(),

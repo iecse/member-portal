@@ -1,6 +1,6 @@
 import withAuth from 'Src/enhancers/withAuth';
 import Login from './Login';
-import Register from './Register';
+import NewUser from './NewUser';
 import Events from './Events';
 import Home from './Home';
 import Admin from './Admin';
@@ -12,9 +12,9 @@ export default [
     component: withAuth(Login, false)
   },
   {
-    name: 'Register',
-    pathname: '/register',
-    component: withAuth(Register, false)
+    name: 'NewUser',
+    pathname: '/newuser',
+    component: withAuth(NewUser, false)
   },
   {
     name: 'Events',

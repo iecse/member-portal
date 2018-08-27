@@ -22,9 +22,9 @@ function* setPassword({ payload }) {
   }
 }
 
-function* registerSaga() {
+function* newUserSaga() {
   yield takeLatest('FETCH_REGISTRATION_DETAILS_BEGIN', getRegistrationDetails);
   yield takeLatest('FETCH_SET_PASSWORD_BEGIN', setPassword);
 }
 
-export default registerSaga;
+export default newUserSaga;

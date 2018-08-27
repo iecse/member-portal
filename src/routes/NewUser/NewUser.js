@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Register extends Component {
+class NewUser extends Component {
   state = {
     password: '',
     rePassword: ''
@@ -28,7 +28,7 @@ class Register extends Component {
     else this.props.history.push('/login');
   }
 
-  register = e => {
+  newUser = e => {
     e.preventDefault();
     const token = new URL(window.location.href).searchParams.get('token');
     if (this.state.password !== this.state.rePassword) {
@@ -66,7 +66,7 @@ class Register extends Component {
         <div>{this.props.memId}</div>
         <div>{this.props.name}</div>
         <div>{this.props.email}</div>
-        <form onSubmit={this.register}>
+        <form onSubmit={this.newUser}>
           <div>
             <input
               onChange={e => this.setState({ password: e.target.value })}
@@ -79,11 +79,11 @@ class Register extends Component {
               type="password"
             />
           </div>
-          <button onClick={this.register}>Submit</button>
+          <button onClick={this.newUser}>Submit</button>
         </form>
       </div>
     );
   }
 }
 
-export default Register;
+export default NewUser;
