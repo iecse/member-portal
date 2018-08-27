@@ -45,13 +45,13 @@ class Navbar extends Component {
             </button>
             {this.props.type > 1 && (
               <button
-                className={this.state.active === '/admin' ? 'active' : ''}
+                className={this.state.active === '/register' ? 'active' : ''}
                 onClick={() => {
-                  this.props.history.push('/admin');
-                  this.setState({ active: '/admin' });
+                  this.props.history.push('/register');
+                  this.setState({ active: '/register' });
                 }}
               >
-                Admin
+                Register
               </button>
             )}
             <button onClick={this.props.logout}>Log Out</button>

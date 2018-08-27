@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import QrScanner from 'Src/modules/QrScanner';
 import VirtualID from 'Src/modules/VirtualID';
 
-const Admin = props => (
+const Register = props => (
   <div>
     <QrScanner
       onScan={data => props.registrationQrScanned(getRegistrationDetails(data))}
@@ -21,7 +21,7 @@ const Admin = props => (
   </div>
 );
 
-Admin.propTypes = {
+Register.propTypes = {
   name: PropTypes.string.isRequired,
   regNo: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
@@ -47,4 +47,4 @@ function getRegistrationDetails(data) {
   };
 }
 
-export default Admin;
+export default Register;

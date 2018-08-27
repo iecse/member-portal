@@ -19,8 +19,8 @@ function* login({ payload }) {
   yield put(action('CLEAR_SNACKBAR'));
 }
 
-function* adminSaga() {
+function* registerSaga() {
   yield takeLatest('FETCH_LOGIN_BEGI', login);
 }
 
-export default adminSaga;
+export default registerSaga;

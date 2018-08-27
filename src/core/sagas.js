@@ -1,6 +1,6 @@
 import { all, put, call } from 'redux-saga/effects';
 import { newUserSaga } from 'Src/routes/NewUser';
-import { adminSaga } from 'Src/routes/Admin';
+import { registerSaga } from 'Src/routes/Register';
 import { loginSaga } from 'Src/routes/Login';
 import { homeSaga } from 'Src/routes/Home';
 import { eventsSaga } from 'Src/routes/Events';
@@ -26,7 +26,7 @@ export function* rootSaga() {
     loginSaga(),
     homeSaga(),
     eventsSaga(),
-    adminSaga(),
+    registerSaga(),
     navbarSaga()
   ]);
 }
