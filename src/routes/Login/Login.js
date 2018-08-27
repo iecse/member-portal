@@ -26,7 +26,7 @@ class Login extends Component {
   render() {
     return (
       <div id="login-page" className="full-page-centered">
-        <div className="login-container">
+        <div className="card">
           <div className="login-details">
             Lorem ipsum dolor sit amet, massa at, feugiat congue diam, donec at
             semper curabitur culpa turpis proin, adipiscing curabitur aliquam

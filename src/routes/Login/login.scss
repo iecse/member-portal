@@ -7,10 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: cornflowerblue;
 
-  .login-container {
-    background: $color-dark;
+  .card {
+    @include card();
+    @include gradient();
+    overflow: hidden;
     height: 450px;
     width: gr(450px);
     display: grid;

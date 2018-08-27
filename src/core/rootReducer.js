@@ -3,6 +3,7 @@ import appReducer from './App/app.reducer';
 import { registerReducer } from 'Src/routes/Register';
 import { homeReducer } from 'Src/routes/Home';
 import { eventsReducer } from 'Src/routes/Events';
+import { adminReducer } from 'Src/routes/Admin';
 import { snackbarReducer } from 'Src/modules/Snackbar';
 
 export default combineReducers({
@@ -10,5 +11,6 @@ export default combineReducers({
   register: registerReducer,
   snackbar: snackbarReducer,
   events: eventsReducer,
-  home: homeReducer
+  home: homeReducer,
+  admin: adminReducer
 });

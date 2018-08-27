@@ -26,7 +26,7 @@ class Navbar extends Component {
           />
           <div className="navbar">
             <button
-              className={this.state.active === '/' && 'active'}
+              className={this.state.active === '/' ? 'active' : ''}
               onClick={() => {
                 this.props.history.push('/');
                 this.setState({ active: '/' });
@@ -35,7 +35,7 @@ class Navbar extends Component {
               Home
             </button>
             <button
-              className={this.state.active === '/events' && 'active'}
+              className={this.state.active === '/events' ? 'active' : ''}
               onClick={() => {
                 this.props.history.push('/events');
                 this.setState({ active: '/events' });
@@ -45,7 +45,7 @@ class Navbar extends Component {
             </button>
             {this.props.type > 1 && (
               <button
-                className={this.state.active === '/admin' && 'active'}
+                className={this.state.active === '/admin' ? 'active' : ''}
                 onClick={() => {
                   this.props.history.push('/admin');
                   this.setState({ active: '/admin' });

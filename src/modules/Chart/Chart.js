@@ -8,7 +8,8 @@ import './chart.scss';
 class Chart extends Component {
   static propTypes = {
     route: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired
+    width: PropTypes.number,
+    height: PropTypes.number.isRequired
   };
 
   state = {
@@ -22,10 +23,13 @@ class Chart extends Component {
 
   render() {
     return (
-      <div className="chart-container">
+      <div className="chart-container" style={{ minHeight: this.props.height }}>
         {this.state.id ? (
           <iframe
-            style={{ width: this.props.width }}
+            style={{
+              width: this.props.width,
+              height: this.props.height
+            }}
             scrolling="no"
             src={charts + '/r/' + this.state.id}
           />

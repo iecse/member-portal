@@ -6,7 +6,7 @@ const Card = props => (
   <div className="card" style={{ ...props.styles }}>
     <div className="heading">{props.heading}</div>
     {Children.only(props.children)}
-    {props.bottomInfo}
+    <div className="bottom-info">{props.bottomInfo}</div>
   </div>
 );
 

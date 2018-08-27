@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Chart from 'Src/modules/Chart';
 import './home.scss';
 import Card from 'Src/modules/Card';
+import Upcoming from 'Src/modules/Upcoming';
 
 class Home extends Component {
   static propTypes = {
@@ -11,8 +12,9 @@ class Home extends Component {
       PropTypes.shape({
         heading: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
-        route: PropTypes.string.isRequired,
-        bottomInfo: PropTypes.string.isRequired
+        route: PropTypes.string,
+        bottomInfo: PropTypes.string,
+        height: PropTypes.number
       })
     ).isRequired
   };
@@ -36,7 +38,18 @@ class Home extends Component {
                   heading={template.heading}
                   bottomInfo={template.bottomInfo}
                 >
-                  <Chart width={template.width} route={template.route} />
+                  <Chart
+                    width={template.width}
+                    height={template.height || 140}
+                    route={template.route}
+                  />
+                </Card>
+              ) : template.type === 'upcoming' ? (
+                <Card
+                  heading={template.heading}
+                  bottomInfo={template.bottomInfo}
+                >
+                  <Upcoming height={template.height} />
                 </Card>
               ) : (
                 <div />

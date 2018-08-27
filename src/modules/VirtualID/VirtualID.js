@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QRCode from 'qrcode.react';
+import qrcode from 'qrcode-js';
 
 const VirtualID = props => (
   <div>
-    {props.memId && <QRCode value={props.memId} />}
+    {props.memId && <img src={qrcode.toDataURL(props.memId, 4)} />}
     <br />
     {props.name}
     <br />

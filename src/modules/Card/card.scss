@@ -1,13 +1,17 @@
 @import 'Src/core/common.scss';
 
 .card {
+  @include card();
   background: #ffffff;
-  box-shadow: $card-shadow;
-  border-radius: $radius;
   padding: 10px;
 
   .heading {
     font-size: 25px;
     font-weight: 500;
+  }
+
+  .bottom-info {
+    text-align: right;
+    color: #333333;
   }
 }

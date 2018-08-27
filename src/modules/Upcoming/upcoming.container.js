@@ -1,18 +1,17 @@
+import Upcoming from './Upcoming';
 import { connect } from 'react-redux';
 import { pick } from 'ramda';
-import Admin from './Admin';
 import action from 'Src/utils/action';
 
 const mapDispatchToProps = dispatch => ({
-  registrationQrScanned: data =>
-    dispatch(action('REGISTRATION_QR_SCANNED', data))
+  fetchUpcomingEvents: () => dispatch(action('FETCH_UPCOMING_EVENTS_BEGIN'))
 });
 
 const mapStateToProps = state => ({
-  ...pick(['name', 'regNo', 'email', 'mobile', 'scanned'], state.admin)
+  ...pick(['upcoming'], state.events)
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Admin);
+)(Upcoming);

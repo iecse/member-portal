@@ -8,17 +8,12 @@
   text-align: center;
 
   .card {
+    @include gradient();
+    @include card();
     width: 100%;
-    background: linear-gradient(
-      to bottom right,
-      darken($color-primary, 10),
-      $color-primary
-    );
     height: 100%;
     padding: 10px;
-    border-radius: $radius;
     position: relative;
-    box-shadow: $card-shadow;
 
     .logo {
       height: 40px;
@@ -46,7 +41,8 @@
         width: auto;
         border: none;
         font-size: 1.1rem;
-        padding: 10px 10px;
+        padding: 10px 5px 30px;
+        margin: 0 10px;
         text-decoration: none;
       }
     }
