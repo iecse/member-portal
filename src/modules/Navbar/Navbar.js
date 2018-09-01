@@ -5,7 +5,6 @@ import './navbar.scss';
 
 class Navbar extends Component {
   static propTypes = {
-    loggedIn: PropTypes.bool.isRequired,
     logout: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired,
     type: PropTypes.number.isRequired,
@@ -14,11 +13,21 @@ class Navbar extends Component {
     })
   };
 
-  state = { active: location.pathname };
+  state = { active: location.pathname, expanded: true };
+
+  componentDidMount() {
+    this.setState({
+      active:
+        location.pathname === '/' || location.pathname === '/login'
+          ? '/'
+          : location.pathname,
+      expanded: location.pathname === '/' || location.pathname === '/login'
+    });
+  }
 
   render() {
-    return this.props.loggedIn ? (
-      <div className="navbar-container">
+    return (
+      <div className={`navbar-container ${this.state.expanded && 'expanded'}`}>
         <div className="card">
           <img
             className="logo"
@@ -29,7 +38,7 @@ class Navbar extends Component {
               className={this.state.active === '/' ? 'active' : ''}
               onClick={() => {
                 this.props.history.push('/');
-                this.setState({ active: '/' });
+                this.setState({ active: '/', expanded: true });
               }}
             >
               Home
@@ -38,17 +47,26 @@ class Navbar extends Component {
               className={this.state.active === '/events' ? 'active' : ''}
               onClick={() => {
                 this.props.history.push('/events');
-                this.setState({ active: '/events' });
+                this.setState({ active: '/events', expanded: false });
               }}
             >
               Events
+            </button>
+            <button
+              className={this.state.active === '/account' ? 'active' : ''}
+              onClick={() => {
+                this.props.history.push('/account');
+                this.setState({ active: '/account', expanded: false });
+              }}
+            >
+              Account
             </button>
             {this.props.type > 1 && (
               <button
                 className={this.state.active === '/register' ? 'active' : ''}
                 onClick={() => {
                   this.props.history.push('/register');
-                  this.setState({ active: '/register' });
+                  this.setState({ active: '/register', expanded: false });
                 }}
               >
                 Register
@@ -56,16 +74,18 @@ class Navbar extends Component {
             )}
             <button onClick={this.props.logout}>Log Out</button>
           </div>
-          <div className="greeting">
-            Hello {this.props.userDetails.name.split(' ')[0]}.
-          </div>
-          <div className="greeting-sub">
-            Welcome to the IECSE member portal.
-          </div>
+          {this.state.expanded && (
+            <div>
+              <div className="greeting">
+                Hello {this.props.userDetails.name.split(' ')[0]}.
+              </div>
+              <div className="greeting-sub">
+                Welcome to IECSE member portal.
+              </div>
+            </div>
+          )}
         </div>
       </div>
-    ) : (
-      <div />
     );
   }
 }

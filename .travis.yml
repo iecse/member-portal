@@ -8,6 +8,3 @@ cache:
 script:
 - npm test
 - npm run build
-before_install:
-- openssl aes-256-cbc -K $encrypted_93fe2792d886_key -iv $encrypted_93fe2792d886_iv
-  -in id_rsa.travis.enc -out id_rsa.travis -d

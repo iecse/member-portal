@@ -1,11 +1,16 @@
 @import 'Src/core/common.scss';
 
 .navbar-container {
-  height: 500px;
+  height: 90px;
   width: 100%;
   padding: 10px;
   color: $color-text-light;
   text-align: center;
+  transition: height 0.1s ease;
+
+  &.expanded {
+    height: 500px;
+  }
 
   .card {
     @include gradient();
@@ -27,6 +32,7 @@
       display: flex;
       justify-content: flex-end;
       padding: 0 10px;
+      margin-top: 2px;
 
       .active {
         border-bottom: solid thin;

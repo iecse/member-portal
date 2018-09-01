@@ -23,13 +23,19 @@ class Upcoming extends Component {
 
   render() {
     return (
-      <div className="events" style={{ height: this.props.height || 'auto' }}>
+      <div
+        className="events"
+        style={{ maxHeight: this.props.height || 'auto' }}
+      >
         {this.props.upcoming.map((event, i) => (
           <div className="event" key={i}>
             <div className="title">{event.name}</div>
             <div className="start">{datetime(event.eventStart)}</div>
           </div>
         ))}
+        {this.props.upcoming.length === 0 && (
+          <div className="no-events">No upcoming events</div>
+        )}
       </div>
     );
   }

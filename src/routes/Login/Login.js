@@ -25,26 +25,15 @@ class Login extends Component {
 
   render() {
     return (
-      <div id="login-page" className="full-page-centered">
+      <div className="login-page full-page-centered">
         <div className="card">
-          <div className="login-details">
-            Lorem ipsum dolor sit amet, massa at, feugiat congue diam, donec at
-            semper curabitur culpa turpis proin, adipiscing curabitur aliquam
-            quis, ut rutrum. Eget vel quam ipsum consequat, pellentesque sapien
-            praesent sed magna eu, dis aliquam magna at. Vitae sed ac
-            pellentesque curabitur, leo at pharetra lorem donec aliquam quam.
-            Aliquet nullam mattis id mi, amet lobortis a lacus sollicitudin
-            rutrum vivamus, sit amet. Donec venenatis nec feugiat habitasse wisi
-            vestibulum, a risus lobortis ipsum ante, ultrices vulputate risus
-            felis risus. Justo ipsum curabitur, litora mauris sed. Quis at ac
-            ultrices suspendisse amet, a mi nostra, venenatis diam. Suscipit
-            tincidunt bibendum ut, ipsum aenean turpis ipsum, volutpat pulvinar,
-            ac nulla tenetur mauris. Deserunt repellendus ultrices nullam
-            elementum, enim ut massa, aenean nonummy.
+          <div className="details">
+            <img src="https://iecsemanipal.com/images/logos/iecse-logo-white.png" />
           </div>
-          <form className="login-form" onSubmit={this.login}>
+          <form className="form" onSubmit={this.login}>
             <div>
               <input
+                spellCheck="false"
                 onChange={e => this.setState({ email: e.target.value })}
                 type="text"
                 placeholder="EMAIL"

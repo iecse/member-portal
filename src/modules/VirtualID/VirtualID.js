@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import qrcode from 'qrcode-js';
+import './virtualID.scss';
 
 const VirtualID = props => (
-  <div>
-    {props.memId && <img src={qrcode.toDataURL(props.memId, 4)} />}
-    <br />
-    {props.name}
-    <br />
-    {props.email}
+  <div className="virtual-id">
+    {props.memId && (
+      <img className="qrcode" src={qrcode.toDataURL(props.memId, 6)} />
+    )}
+    <div className="details">
+      <div className="name">{props.name}</div>
+      <br />
+      {props.email}
+    </div>
   </div>
 );
 

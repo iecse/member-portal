@@ -1,0 +1,23 @@
+@import 'Src/core/common.scss';
+
+.events-page {
+  width: 100%;
+
+  &.empty {
+    padding-top: calc((100vh - 90px) / 2);
+  }
+
+  &:not(.empty) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .no-events {
+    color: $color-disabled;
+    text-align: center;
+  }
+
+  .card-container {
+    padding: 10px;
+  }
+}

@@ -4,22 +4,21 @@ import { datetime } from 'Src/utils';
 
 const Event = props => (
   <div>
-    <div>{props.name}</div>
-    <div>{props.desc}</div>
-    <div>{datetime(props.start)}</div>
-    <div>{datetime(props.end)}</div>
+    <div>{props.details}</div>
+    <div>{props.description}</div>
+    <div>{datetime(props.eventStart)}</div>
+    <div>{datetime(props.eventEnd)}</div>
     <div>{props.audience}</div>
-    <div>{props.domain}</div>
+    <br />
   </div>
 );
 
 Event.propTypes = {
-  name: PropTypes.string,
-  desc: PropTypes.string,
-  start: PropTypes.string,
-  end: PropTypes.string,
-  audience: PropTypes.string,
-  domain: PropTypes.string
+  details: PropTypes.string,
+  description: PropTypes.string,
+  eventStart: PropTypes.string,
+  eventEnd: PropTypes.string,
+  audience: PropTypes.string
 };
 
 export default Event;

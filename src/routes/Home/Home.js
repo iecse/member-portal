@@ -25,7 +25,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div id="home-page">
+      <div className="home-page">
         <div className="grid-container">
           {this.props.content.map((template, i) => (
             <div

@@ -4,6 +4,7 @@ import NewUser from './NewUser';
 import Events from './Events';
 import Home from './Home';
 import Register from './Register';
+import Account from './Account';
 
 export default [
   {
@@ -20,6 +21,11 @@ export default [
     name: 'Events',
     pathname: '/events',
     component: withAuth(Events)
+  },
+  {
+    name: 'Account',
+    pathname: '/account',
+    component: withAuth(Account)
   },
   {
     name: 'Register',

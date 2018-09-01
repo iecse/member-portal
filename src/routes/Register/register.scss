@@ -1,0 +1,21 @@
+@import 'Src/core/common.scss';
+
+.register-page {
+  display: flex;
+
+  .qr-container {
+    @include card();
+    width: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 400px;
+    min-height: 400px;
+  }
+
+  .details {
+    margin: 10px;
+    height: 400px;
+    width: 100%;
+  }
+}

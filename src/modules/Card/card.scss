@@ -4,6 +4,8 @@
   @include card();
   background: #ffffff;
   padding: 10px;
+  height: 100%;
+  width: 100%;
 
   .heading {
     font-size: 25px;
@@ -12,6 +14,6 @@
 
   .bottom-info {
     text-align: right;
-    color: #333333;
+    color: $color-disabled;
   }
 }
