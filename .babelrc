@@ -6,6 +6,12 @@
     "syntax-dynamic-import"
   ],
   "env": {
+    "test": {
+      "plugins": [
+        "dynamic-import-node",
+        "syntax-dynamic-import"
+      ]
+    },
     "development": {
       "plugins": [
         [
