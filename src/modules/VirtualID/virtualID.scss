@@ -14,6 +14,32 @@
     .name {
       font-size: 30px;
       font-weight: 500;
+      margin: 10px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .virtual-id {
+    flex-direction: column;
+    height: auto;
+
+    .qrcode-container {
+      text-align: center;
+
+      .qrcode {
+        height: 200px;
+        width: 200px;
+        text-align: center;
+      }
+    }
+    .details {
+      padding: 10px;
+      height: auto;
+
+      .name {
+        font-size: 25px;
+      }
     }
   }
 }

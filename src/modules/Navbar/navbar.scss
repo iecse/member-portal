@@ -10,6 +10,19 @@
 
   &.expanded {
     height: 500px;
+
+    @media only screen and (max-width: 600px) {
+      height: 300px;
+    }
+  }
+
+  &:not(.expanded) {
+    padding: 0;
+
+    .card {
+      border-radius: 0;
+      height: 63px;
+    }
   }
 
   .card {
@@ -21,42 +34,134 @@
     position: relative;
 
     .logo {
-      height: 40px;
+      height: 35px;
       position: absolute;
       top: 15px;
       left: 20px;
     }
 
-    .navbar {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      padding: 0 10px;
-      margin-top: 2px;
+    .hamburger-icon {
+      display: none;
 
-      .active {
-        border-bottom: solid thin;
+      @media only screen and (max-width: 600px) {
+        & {
+          display: block;
+        }
+      }
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: inherit;
+
+      div {
+        height: 3px;
+        background: $color-light;
+        width: 20px;
+        margin: 0 0 4px;
+        border-radius: 2px;
+        transition: all ease 0.2s;
       }
 
-      button {
-        outline: none;
-        height: 35px;
-        cursor: pointer;
-        background: transparent;
-        color: inherit;
-        width: auto;
-        border: none;
-        font-size: 1.1rem;
-        padding: 10px 5px 30px;
-        margin: 0 10px;
-        text-decoration: none;
+      &.open {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+
+        div {
+          background: $color-dark;
+        }
+
+        div:first-child {
+          transform: translate(10px, 7px) rotate(45deg);
+        }
+
+        div:nth-child(2) {
+          opacity: 0;
+        }
+
+        div:last-child {
+          transform: translate(10px, -7px) rotate(-45deg);
+        }
+      }
+    }
+
+    .nav {
+      @media only screen and (max-width: 600px) {
+        & {
+          position: fixed;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+          transform: translateY(-110%);
+          transition: all ease 0.5s;
+          overflow-y: auto;
+          width: 100%;
+          max-height: 105vh;
+        }
+
+        &.open {
+          transform: translateY(-5%);
+        }
+
+        button {
+          text-align: left;
+          width: calc(100% - 80px) !important;
+        }
+      }
+
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        margin-top: 2px;
+
+        @media only screen and (max-width: 600px) {
+          & {
+            padding-top: 50px;
+            flex-direction: column;
+            background: $color-light;
+            color: $color-dark;
+          }
+        }
+
+        .active {
+          border-bottom: solid thin;
+        }
+
+        button {
+          outline: none;
+          height: 35px;
+          cursor: pointer;
+          background: transparent;
+          color: inherit;
+          width: auto;
+          border: none;
+          font-size: 1.1rem;
+          padding: 10px 5px 30px;
+          margin: 0 10px;
+          text-decoration: none;
+
+          @media only screen and (max-width: 600px) {
+            & {
+              margin: 10px;
+            }
+          }
+        }
       }
     }
 
     .greeting {
       padding: 140px 0 40px;
       font-weight: 500;
-      font-size: 90px;
+      font-size: 7vw;
+
+      @media only screen and (max-width: 600px) {
+        & {
+          padding: 90px 0 20px;
+          font-size: 10vw;
+        }
+      }
     }
   }
 }

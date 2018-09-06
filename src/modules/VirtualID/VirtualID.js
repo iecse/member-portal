@@ -5,13 +5,14 @@ import './virtualID.scss';
 
 const VirtualID = props => (
   <div className="virtual-id">
-    {props.memId && (
-      <img className="qrcode" src={qrcode.toDataURL(props.memId, 6)} />
-    )}
+    <div className="qrcode-container">
+      {props.memId && (
+        <img className="qrcode" src={qrcode.toDataURL(props.memId, 6)} />
+      )}
+    </div>
     <div className="details">
       <div className="name">{props.name}</div>
-      <br />
-      {props.email}
+      <div>{props.email}</div>
     </div>
   </div>
 );

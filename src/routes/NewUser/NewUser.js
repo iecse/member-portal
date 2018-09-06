@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import './newUser.scss';
+
 class NewUser extends Component {
   state = {
     password: '',
@@ -9,7 +11,6 @@ class NewUser extends Component {
 
   static propTypes = {
     getRegistrationDetails: PropTypes.func.isRequired,
-    memId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     history: PropTypes.object.isRequired,
@@ -62,25 +63,31 @@ class NewUser extends Component {
 
   render() {
     return (
-      <div>
-        <div>{this.props.memId}</div>
-        <div>{this.props.name}</div>
-        <div>{this.props.email}</div>
-        <form onSubmit={this.newUser}>
-          <div>
-            <input
-              onChange={e => this.setState({ password: e.target.value })}
-              type="password"
-            />
-          </div>
-          <div>
-            <input
-              onChange={e => this.setState({ rePassword: e.target.value })}
-              type="password"
-            />
-          </div>
-          <button onClick={this.newUser}>Submit</button>
-        </form>
+      <div className="new-user">
+        <div className="card">
+          <div className="greeting">Hi, {this.props.name}</div>
+          <div className="details">Set your member portal password.</div>
+          <div className="email">Email: {this.props.email}</div>
+          <form onSubmit={this.newUser}>
+            <div>
+              <input
+                onChange={e => this.setState({ password: e.target.value })}
+                type="password"
+                placeholder="PASSWORD"
+              />
+            </div>
+            <div>
+              <input
+                onChange={e => this.setState({ rePassword: e.target.value })}
+                type="password"
+                placeholder="RETYPE PASSWORD"
+              />
+            </div>
+            <div className="submit-container">
+              <button onClick={this.newUser}>Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

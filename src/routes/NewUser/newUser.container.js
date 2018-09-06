@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  ...pick(['memId', 'name', 'email'], state.newUser)
+  ...pick(['name', 'email'], state.newUser)
 });
 
 export default connect(

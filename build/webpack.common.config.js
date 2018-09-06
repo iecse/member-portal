@@ -32,7 +32,10 @@ module.exports = {
     }
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    open: true,
+    host: '0',
+    public: 'http://localhost:8080'
   },
   plugins: [
     new HtmlWebPackPlugin({

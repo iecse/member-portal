@@ -2,20 +2,37 @@
 
 .register-page {
   display: flex;
+  padding: 10px;
 
   .qr-container {
     @include card();
     width: auto;
     display: inline-block;
     overflow: hidden;
-    margin: 10px;
     min-width: 400px;
     min-height: 400px;
   }
 
   .details {
-    margin: 10px;
+    margin-left: 10px;
     height: 400px;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .register-page {
+    flex-direction: column;
+
+    .qr-container {
+      margin: 0;
+      min-width: 200px;
+      min-height: 200px;
+    }
+
+    .details {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 }

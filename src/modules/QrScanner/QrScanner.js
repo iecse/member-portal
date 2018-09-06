@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import QrReader from 'react-qr-reader';
 
 const QrScanner = props => (
-  <div>
-    <QrReader
-      delay={300}
-      onError={err => console.log(err)}
-      onScan={data => data && props.onScan(data)}
-      style={{ width: '400px', height: '400px' }}
-    />
-  </div>
+  <QrReader
+    delay={300}
+    onError={err => console.log(err)}
+    onScan={data => data && props.onScan(data)}
+    style={{ width: '100%', height: '100%' }}
+  />
 );
 
 QrScanner.propTypes = {

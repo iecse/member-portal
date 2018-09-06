@@ -19,5 +19,14 @@
 
   .card-container {
     padding: 10px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .events-page {
+    .card-container {
+      width: 100%;
+    }
   }
 }

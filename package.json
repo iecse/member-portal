@@ -64,7 +64,7 @@
     "webpack-merge": "4.1.3"
   },
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server",
     "build": "webpack --env.env=prod",
     "build:stats": "webpack --env.env=prod --env.addons=analyze",
     "clean": "rimraf ./dist",

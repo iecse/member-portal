@@ -28,7 +28,10 @@ class Login extends Component {
       <div className="login-page full-page-centered">
         <div className="card">
           <div className="details">
-            <img src="https://iecsemanipal.com/images/logos/iecse-logo-white.png" />
+            <img
+              className="logo"
+              src="https://iecsemanipal.com/images/logos/iecse-logo-white.png"
+            />
           </div>
           <form className="form" onSubmit={this.login}>
             <div>

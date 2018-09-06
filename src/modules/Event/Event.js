@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { datetime } from 'Src/utils';
 
+import './event.scss';
+
 const Event = props => (
-  <div>
-    <div>{props.details}</div>
-    <div>{props.description}</div>
-    <div>{datetime(props.eventStart)}</div>
-    <div>{datetime(props.eventEnd)}</div>
-    <div>{props.audience}</div>
-    <br />
+  <div className="event">
+    <div className="details">{props.details}</div>
+    <div className="description">{props.description}</div>
+    <div className="eventStart">{datetime(props.eventStart)}</div>
+    <div className="eventEnd">{datetime(props.eventEnd)}</div>
+    <div className="audience">{props.audience}</div>
   </div>
 );
 
