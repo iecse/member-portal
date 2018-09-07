@@ -30,7 +30,7 @@ export default [
   {
     name: 'Register',
     pathname: '/register',
-    component: withAuth(Register, true, 2)
+    component: withAuth(Register, true, 20)
   },
   {
     name: 'Home',

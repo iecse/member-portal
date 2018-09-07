@@ -70,7 +70,7 @@ class Navbar extends Component {
               >
                 Account
               </button>
-              {this.props.type > 1 && (
+              {this.props.type >= 20 && (
                 <button
                   className={this.state.active === '/register' ? 'active' : ''}
                   onClick={() => {
