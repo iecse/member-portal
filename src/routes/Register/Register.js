@@ -63,6 +63,7 @@ Register.propTypes = {
 };
 
 function getMemId(data) {
+  data = data.replace(/[\n\r]/g, '');
   if (
     /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(
       data
