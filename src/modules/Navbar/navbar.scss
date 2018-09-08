@@ -3,10 +3,11 @@
 .navbar-container {
   height: 90px;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   color: $color-text-light;
   text-align: center;
   transition: height 0.1s ease;
+  user-select: none;
 
   &.expanded {
     height: 500px;
@@ -163,5 +164,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    padding: 10px;
   }
 }

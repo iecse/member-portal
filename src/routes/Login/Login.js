@@ -36,6 +36,8 @@ class Login extends Component {
           <form className="form" onSubmit={this.login}>
             <div>
               <input
+                autoCapitalize="off"
+                autoComplete="off"
                 spellCheck="false"
                 onChange={e => this.setState({ email: e.target.value })}
                 type="text"

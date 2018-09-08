@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { datetime } from 'Src/utils';
+import moment from 'moment';
 import './upcoming.scss';
 
 class Upcoming extends Component {
@@ -27,12 +28,14 @@ class Upcoming extends Component {
         className="events"
         style={{ maxHeight: this.props.height || 'auto' }}
       >
-        {this.props.upcoming.map((event, i) => (
-          <div className="event" key={i}>
-            <div className="title">{event.name}</div>
-            <div className="start">{datetime(event.eventStart)}</div>
-          </div>
-        ))}
+        {this.props.upcoming
+          .sort((e1, e2) => moment(e1.eventStart).isAfter(e2.eventStart))
+          .map((event, i) => (
+            <div className="event" key={i}>
+              <div className="title">{event.name}</div>
+              <div className="start">{datetime(event.eventStart)}</div>
+            </div>
+          ))}
         {this.props.upcoming.length === 0 && (
           <div className="no-events">No upcoming events</div>
         )}

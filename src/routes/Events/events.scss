@@ -2,6 +2,7 @@
 
 .events-page {
   width: 100%;
+  padding: 0 10px;
 
   &.empty {
     padding-top: calc((100vh - 90px) / 2);
@@ -25,6 +26,7 @@
 
 @media only screen and (max-width: 600px) {
   .events-page {
+    padding: 0;
     .card-container {
       width: 100%;
     }
