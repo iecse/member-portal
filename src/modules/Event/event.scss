@@ -1,14 +1,19 @@
+@import 'Src/core/common.scss';
+
 .event {
+  padding: 5px;
+
   .details {
     font-size: 12px;
-    padding: 5px;
+    padding: 0 0 5px;
   }
-  .description {
-  }
-  .eventStart {
-  }
-  .eventEnd {
-  }
-  .audience {
+
+  .timings {
+    padding-top: 15px;
+    font-size: 12px;
+    span {
+      font-weight: bold;
+      color: $color-disabled;
+    }
   }
 }

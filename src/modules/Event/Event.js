@@ -8,9 +8,11 @@ const Event = props => (
   <div className="event">
     <div className="details">{props.details}</div>
     <div className="description">{props.description}</div>
-    <div className="eventStart">{datetime(props.eventStart)}</div>
-    <div className="eventEnd">{datetime(props.eventEnd)}</div>
-    <div className="audience">{props.audience}</div>
+    <div className="timings">
+      <span>Start:</span> {datetime(props.eventStart)}
+      <br />
+      <span>End:</span> {datetime(props.eventEnd)}
+    </div>
   </div>
 );
 
