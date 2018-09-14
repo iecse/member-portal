@@ -6,10 +6,12 @@ import './app.scss';
 import Navbar from 'Src/modules/Navbar';
 import Snackbar from 'Src/modules/Snackbar';
 import Loader from 'Src/modules/Loader';
+import Favicon from 'react-favicon';
 
 const App = props => (
   <div>
     {props.loading && <Loader />}
+    <Favicon url="https://iecsemanipal.com/images/logos/logo-white.png" />
     <Router>
       <div className="app-container">
         {props.loggedIn && <Navbar />}
