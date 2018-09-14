@@ -15,7 +15,7 @@ export default [
   {
     name: 'NewUser',
     pathname: '/newuser',
-    component: withAuth(NewUser, false)
+    component: NewUser
   },
   {
     name: 'Events',
