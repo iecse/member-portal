@@ -16,7 +16,7 @@ const connector = Component =>
     mapDispatchToProps
   )(Component);
 
-const withAuth = (Component, authRequired = true, type = 1) =>
+const withAuth = (Component, authRequired = true, type = 10) =>
   class withAuthHOC extends React.Component {
     state = {
       start: false

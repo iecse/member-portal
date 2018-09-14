@@ -13,7 +13,7 @@ const initialState = {
     memId: '',
     name: '',
     email: '',
-    type: 1
+    type: 0
   }
 };
 
