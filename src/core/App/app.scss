@@ -12,11 +12,14 @@ body {
   min-height: 100vh;
 
   .app-container {
-    background-image: url('../../public/pagebottom.svg');
-    background-position: bottom left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    &.background {
+      background-image: url('../../public/pagebottom.svg');
+      background-position: bottom left;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
     min-height: 100vh;
   }
 }
