@@ -8,23 +8,25 @@ import Snackbar from 'Src/modules/Snackbar';
 import Loader from 'Src/modules/Loader';
 
 const App = props => (
-  <Router>
-    <div className="app-container">
-      {props.loading && <Loader />}
-      {props.loggedIn && <Navbar />}
-      <Switch>
-        {routes.map(route => (
-          <Route
-            exact
-            key={route.pathname}
-            path={route.pathname}
-            component={route.component}
-          />
-        ))}
-      </Switch>
-      <Snackbar />
-    </div>
-  </Router>
+  <div>
+    {props.loading && <Loader />}
+    <Router>
+      <div className="app-container">
+        {props.loggedIn && <Navbar />}
+        <Switch>
+          {routes.map(route => (
+            <Route
+              exact
+              key={route.pathname}
+              path={route.pathname}
+              component={route.component}
+            />
+          ))}
+        </Switch>
+        <Snackbar />
+      </div>
+    </Router>
+  </div>
 );
 
 App.propTypes = {
