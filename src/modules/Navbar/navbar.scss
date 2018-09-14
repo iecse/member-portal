@@ -31,8 +31,18 @@
     @include card();
     width: 100%;
     height: 100%;
-    padding: 10px;
     position: relative;
+    padding: 0;
+
+    & > div {
+      background-image: url('../../public/navbar.svg');
+      background-repeat: no-repeat;
+      background-position-y: -40px;
+      background-position-x: -40px;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+    }
 
     .logo {
       height: 35px;
