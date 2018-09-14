@@ -6,7 +6,6 @@ function* logout() {
   const data = yield call(request, '/logout');
   if (data.success) {
     yield put(action('SET_SNACKBAR', { type: 'success', message: data.msg }));
-    localStorage.setItem('auth', false);
     yield put(action('SET_LOGGED_IN', false));
   } else
     yield put(action('SET_SNACKBAR', { type: 'danger', message: data.msg }));

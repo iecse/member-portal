@@ -5,7 +5,7 @@ import App from './App';
 const mapDispatchToProps = () => ({});
 
 const mapStateToProps = state => ({
-  ...pick(['loggedIn'], state.common)
+  ...pick(['loggedIn', 'loading'], state.common)
 });
 
 export default connect(

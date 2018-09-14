@@ -26,10 +26,6 @@ export default (route, data = null, endpoint = api) => {
     .then(data => {
       process.env.NODE_ENV === 'development' && console.table(data);
       if (data.success === undefined) data.success = false;
-      if (data.success === false && data.msg === 'Not logged in') {
-        localStorage.setItem('auth', false);
-        location.reload();
-      }
       return data;
     })
     .catch(err => {

@@ -5,10 +5,12 @@ import routes from 'Src/routes';
 import './app.scss';
 import Navbar from 'Src/modules/Navbar';
 import Snackbar from 'Src/modules/Snackbar';
+import Loader from 'Src/modules/Loader';
 
 const App = props => (
   <Router>
     <div className="app-container">
+      {props.loading && <Loader />}
       {props.loggedIn && <Navbar />}
       <Switch>
         {routes.map(route => (
@@ -26,7 +28,8 @@ const App = props => (
 );
 
 App.propTypes = {
-  loggedIn: PropTypes.bool.isRequired
+  loggedIn: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired
 };
 
 export default App;
