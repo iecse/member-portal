@@ -13,7 +13,11 @@ const App = props => (
     {props.loading && <Loader />}
     <Favicon url="https://iecsemanipal.com/images/logos/logo-white.png" />
     <Router>
-      <div className={`app-container ${props.loggedIn && 'background'}`}>
+      <div
+        className={`app-container ${!props.loading &&
+          props.loggedIn &&
+          'background'}`}
+      >
         {props.loggedIn && <Navbar />}
         <Switch>
           {routes.map(route => (
