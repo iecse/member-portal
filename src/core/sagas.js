@@ -4,6 +4,8 @@ import { registerSaga } from 'Src/routes/Register';
 import { loginSaga } from 'Src/routes/Login';
 import { homeSaga } from 'Src/routes/Home';
 import { eventsSaga } from 'Src/routes/Events';
+import { tutorialsSaga } from 'Src/routes/Tutorials';
+import { tutorialSaga } from 'Src/routes/Tutorial';
 import { navbarSaga } from 'Src/modules/Navbar';
 import { action, request } from 'Src/utils';
 
@@ -25,7 +27,9 @@ export function* rootSaga() {
     homeSaga(),
     eventsSaga(),
     registerSaga(),
-    navbarSaga()
+    navbarSaga(),
+    tutorialsSaga(),
+    tutorialSaga()
   ]);
 }
 

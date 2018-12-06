@@ -9,9 +9,9 @@ const Event = props => (
     <div className="details">{props.details}</div>
     <div className="description">{props.description}</div>
     <div className="timings">
-      <span>Start:</span> {datetime(props.eventStart)}
+      {props.eventStart && <span>Start: {datetime(props.eventStart)}</span>}
       <br />
-      <span>End:</span> {datetime(props.eventEnd)}
+      {props.eventEnd && <span>End: {datetime(props.eventEnd)}</span>}
     </div>
   </div>
 );

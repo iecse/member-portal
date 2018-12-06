@@ -1,0 +1,15 @@
+@import 'Src/core/common.scss';
+
+.tutorials-page {
+  padding: 15px 15%;
+  width: 100%;
+  background: #eee;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .tutorials-page {
+    padding: 10px 10px;
+  }
+}

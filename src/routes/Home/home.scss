@@ -1,6 +1,12 @@
 .home-page {
   width: 100%;
   padding: 0 10px;
+  background-image: url('../../public/pagebottom.svg');
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: calc(100vh - 400px);
 
   .grid-container {
     display: flex;
@@ -14,6 +20,7 @@
 
 @media only screen and (max-width: 600px) {
   .home-page {
+    min-height: calc(100vh - 300px);
     padding: 0;
   }
 }
