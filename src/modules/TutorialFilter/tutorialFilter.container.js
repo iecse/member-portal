@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
-import Tutorials from './Tutorials';
-import action from 'Src/utils/action';
 import { pick } from 'ramda';
+import TutorialFilter from './TutorialFilter';
+import { action } from 'Src/utils';
 
 const mapDispatchToProps = dispatch => ({
-  fetchTutorials: data => dispatch(action('FETCH_TUTORIALS_BEGIN', data))
+  addFilter: data => dispatch(action('ADD_TUTORIAL_FILTER', data)),
+  removeFilter: data => dispatch(action('REMOVE_TUTORIAL_FILTER', data)),
+  clearFilters: () => dispatch(action('CLEAR_TUTORIAL_FILTERS'))
 });
 
 const mapStateToProps = state => ({
@@ -15,4 +17,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Tutorials);
+)(TutorialFilter);

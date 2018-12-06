@@ -1,11 +1,24 @@
 @import 'Src/core/common.scss';
 
 .tutorials-page {
-  padding: 15px 15%;
+  padding: 15px;
   width: 100%;
   background: #eee;
   height: calc(100vh - 56px);
   overflow-y: auto;
+  display: flex;
+
+  .filter-container {
+    width: 400px;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    margin-right: 15px;
+  }
+
+  .tutorials-container {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {

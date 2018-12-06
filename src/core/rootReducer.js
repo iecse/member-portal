@@ -5,6 +5,7 @@ import { homeReducer } from 'Src/routes/Home';
 import { eventsReducer } from 'Src/routes/Events';
 import { registerReducer } from 'Src/routes/Register';
 import { tutorialsReducer } from 'Src/routes/Tutorials';
+import { tutorialFilterReducer } from 'Src/modules/TutorialFilter';
 import { snackbarReducer } from 'Src/modules/Snackbar';
 
 export default combineReducers({
@@ -14,5 +15,6 @@ export default combineReducers({
   events: eventsReducer,
   home: homeReducer,
   register: registerReducer,
-  tutorials: tutorialsReducer
+  tutorials: tutorialsReducer,
+  tutorialFilter: tutorialFilterReducer
 });
