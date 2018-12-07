@@ -40,12 +40,12 @@
       overflow-y: auto;
       padding: 20px;
 
-      code {
+      pre {
         background: #eeeeee;
-        padding: 7px;
+        padding: 10px 15px;
         border-radius: 2px;
-        width: 30px;
-        overflow-x: hidden;
+        line-height: 25px;
+        overflow: auto;
       }
     }
   }
@@ -53,8 +53,18 @@
 
 @media only screen and (max-width: 600px) {
   .tutorial-page {
-    .domain {
-      display: none;
+    padding: 5px;
+
+    .tutorial {
+      padding: 20px;
+
+      .domain {
+        display: none;
+      }
+
+      .content {
+        padding: 0;
+      }
     }
   }
 }

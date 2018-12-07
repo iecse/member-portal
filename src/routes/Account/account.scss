@@ -1,5 +1,7 @@
 .account-page {
   padding: 20px;
+  height: calc(100vh - 56px);
+  background: #eeeeee;
 }
 @media only screen and (max-width: 600px) {
   .account-page {

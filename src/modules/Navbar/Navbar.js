@@ -46,19 +46,6 @@ class Navbar extends Component {
                   HOME
                 </button>
                 <button
-                  className={this.state.active === '/events' ? 'active' : ''}
-                  onClick={() => {
-                    this.props.history.push('/events');
-                    this.setState({
-                      active: '/events',
-                      expanded: false,
-                      open: false
-                    });
-                  }}
-                >
-                  EVENTS
-                </button>
-                <button
                   className={this.state.active === '/tutorials' ? 'active' : ''}
                   onClick={() => {
                     this.props.history.push('/tutorials');
@@ -70,6 +57,19 @@ class Navbar extends Component {
                   }}
                 >
                   TUTORIALS
+                </button>
+                <button
+                  className={this.state.active === '/events' ? 'active' : ''}
+                  onClick={() => {
+                    this.props.history.push('/events');
+                    this.setState({
+                      active: '/events',
+                      expanded: false,
+                      open: false
+                    });
+                  }}
+                >
+                  EVENTS
                 </button>
                 <button
                   className={this.state.active === '/account' ? 'active' : ''}

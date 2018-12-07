@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'react-remarkable';
 import hljs from 'highlight.js';
-import './styles/github.scss';
+import './hljs.scss';
 import './tutorial.scss';
 
 class Tutorial extends Component {
@@ -26,6 +26,7 @@ class Tutorial extends Component {
               source={this.props.content}
               options={{
                 linkify: true,
+                langPrefix: 'code-block language-',
                 highlight: function(str, lang) {
                   if (lang && hljs.getLanguage(lang)) {
                     try {

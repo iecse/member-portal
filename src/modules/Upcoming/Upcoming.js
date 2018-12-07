@@ -25,13 +25,13 @@ class Upcoming extends Component {
   render() {
     return (
       <div
-        className="events"
+        className="upcoming-events"
         style={{ maxHeight: this.props.height || 'auto' }}
       >
         {this.props.upcoming
           .sort((e1, e2) => moment(e1.eventStart).isAfter(e2.eventStart))
           .map((event, i) => (
-            <div className="event" key={i}>
+            <div className="upcoming-event" key={`upcoming-event-${i}`}>
               <div className="title">{event.name}</div>
               <div className="start">{datetime(event.eventStart)}</div>
             </div>

@@ -2,15 +2,13 @@
 
 .events-page {
   width: 100%;
-  padding: 10px 10px 0;
+  padding: 10px 15% 0;
+  background: #eeeeee;
+  height: calc(100vh - 56px);
+  overflow: auto;
 
   &.empty {
     padding-top: calc((100vh - 90px) / 2);
-  }
-
-  &:not(.empty) {
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .no-events {
@@ -19,8 +17,8 @@
   }
 
   .card-container {
-    padding: 10px;
-    width: 50%;
+    padding: 5px;
+    width: 100%;
   }
 }
 

@@ -2,9 +2,17 @@
 
 .event {
   padding: 5px;
+  margin-top: 5px;
+  border-top: solid thin rgba(200, 200, 200, 0.3);
+  position: relative;
+  padding-top: 25px;
 
   .details {
+    position: absolute;
+    top: 5px;
+    right: 5px;
     font-size: 12px;
+    color: $color-disabled;
     padding: 0 0 5px;
   }
 
@@ -12,7 +20,6 @@
     padding-top: 15px;
     font-size: 12px;
     span {
-      font-weight: bold;
       color: $color-disabled;
     }
   }

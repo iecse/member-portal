@@ -1,10 +1,10 @@
 @import 'Src/core/common.scss';
 
-.events {
+.upcoming-events {
   margin: 10px 0;
   overflow: auto;
 
-  .event {
+  .upcoming-event {
     margin: 15px;
 
     .title {
@@ -20,5 +20,21 @@
     text-align: center;
     margin: 10px;
     color: $color-disabled;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .upcoming-events {
+    margin: 0;
+
+    .upcoming-event {
+      .title {
+        font-size: 1.1rem;
+      }
+
+      .start {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
