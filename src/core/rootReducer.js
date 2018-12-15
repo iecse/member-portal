@@ -7,8 +7,10 @@ import { registerReducer } from 'Src/routes/Register';
 import { tutorialsReducer } from 'Src/routes/Tutorials';
 import { tutorialFilterReducer } from 'Src/modules/TutorialFilter';
 import { snackbarReducer } from 'Src/modules/Snackbar';
+import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
+  form: formReducer,
   common: appReducer,
   newUser: newUserReducer,
   snackbar: snackbarReducer,

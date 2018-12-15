@@ -7,6 +7,8 @@ import { eventsSaga } from 'Src/routes/Events';
 import { tutorialsSaga } from 'Src/routes/Tutorials';
 import { tutorialSaga } from 'Src/routes/Tutorial';
 import { navbarSaga } from 'Src/modules/Navbar';
+import { forgotPasswordFormSaga } from 'Src/modules/ForgotPasswordForm';
+import { setPasswordFormSaga } from 'Src/modules/SetPasswordForm';
 import { action, request } from 'Src/utils';
 
 function* init() {
@@ -29,7 +31,9 @@ export function* rootSaga() {
     registerSaga(),
     navbarSaga(),
     tutorialsSaga(),
-    tutorialSaga()
+    tutorialSaga(),
+    forgotPasswordFormSaga(),
+    setPasswordFormSaga()
   ]);
 }
 

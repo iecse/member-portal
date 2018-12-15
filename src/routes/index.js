@@ -7,12 +7,24 @@ import Tutorial from './Tutorial';
 import Home from './Home';
 // import Register from './Register';
 import Account from './Account';
+import ForgotPassword from './ForgotPassword';
+import SetPassword from './SetPassword';
 
 export default [
   {
     name: 'Login',
     pathname: '/login',
     component: withAuth(Login, false)
+  },
+  {
+    name: 'ForgotPassword',
+    pathname: '/forgotpassword',
+    component: ForgotPassword
+  },
+  {
+    name: 'SetPassword',
+    pathname: '/resetpassword',
+    component: SetPassword
   },
   {
     name: 'NewUser',
