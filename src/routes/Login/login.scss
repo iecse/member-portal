@@ -63,6 +63,15 @@
         margin: 15px 25% 0;
         height: 40px;
       }
+
+      .forgot {
+        color: $color-light;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
 

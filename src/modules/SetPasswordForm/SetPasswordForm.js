@@ -7,6 +7,7 @@ import './setPasswordForm.scss';
 let SetPasswordForm = props => (
   <div className="set-password-form">
     <div className="form">
+      <div className="title">Reset Password</div>
       <form
         onSubmit={props.handleSubmit(data =>
           props.onSetPassword({

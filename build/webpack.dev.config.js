@@ -12,12 +12,7 @@ module.exports = {
             loader: 'style-loader'
           },
           {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              sourceMap: true,
-              minimize: true
-            }
+            loader: 'css-loader'
           },
           {
             loader: 'sass-loader'

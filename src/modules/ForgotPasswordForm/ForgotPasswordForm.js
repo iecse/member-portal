@@ -2,12 +2,13 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-// import Captcha from 'Src/modules/Captcha';
+import Captcha from 'Src/modules/Captcha';
 import './forgotPasswordForm.scss';
 
 let ForgotPasswordForm = props => (
   <div className="forgot-password-form">
     <div className="form">
+      <div className="title">Forgot Password</div>
       <form onSubmit={props.handleSubmit}>
         <Field
           name="email"
@@ -15,7 +16,7 @@ let ForgotPasswordForm = props => (
           type="email"
           placeholder="EMAIL"
         />
-        {/* <Field name="captcha" component={Captcha} /> */}
+        <Field name="g-recaptcha-response" component={Captcha} />
         <button>SUBMIT</button>
       </form>
     </div>

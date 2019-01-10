@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import './login.scss';
 
 class Login extends Component {
@@ -51,6 +52,12 @@ class Login extends Component {
               />
               <br />
               <button onClick={this.login}>LOGIN</button>
+              <div
+                onClick={() => this.props.history.push('/forgotpassword')}
+                className="forgot"
+              >
+                Forgot password?
+              </div>
             </div>
           </form>
         </div>
@@ -59,4 +66,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

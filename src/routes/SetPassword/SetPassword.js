@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import SetPasswordForm from 'Src/modules/SetPasswordForm';
 import './setPassword.scss';
@@ -21,6 +22,12 @@ class SetPassword extends Component {
   render() {
     return (
       <div className="set-password-page">
+        <div
+          className="login"
+          onClick={() => this.props.history.push('/login')}
+        >
+          LOGIN
+        </div>
         <div className="form-container">
           <SetPasswordForm token={this.state.token} />
         </div>
@@ -29,4 +36,4 @@ class SetPassword extends Component {
   }
 }
 
-export default SetPassword;
+export default withRouter(SetPassword);
