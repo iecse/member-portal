@@ -40,6 +40,10 @@
       overflow-y: auto;
       padding: 20px;
 
+      img {
+        max-width: 90vw;
+      }
+
       pre {
         background: #eeeeee;
         padding: 10px 15px;
