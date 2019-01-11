@@ -1,0 +1,15 @@
+@import 'Src/core/common.scss';
+
+.mail-subscription {
+  padding: 10px 0;
+  .message {
+    font-size: 0.9rem;
+  }
+  .sub-button {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background: #ddd;
+    border: none;
+  }
+}

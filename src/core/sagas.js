@@ -9,6 +9,7 @@ import { tutorialSaga } from 'Src/routes/Tutorial';
 import { navbarSaga } from 'Src/modules/Navbar';
 import { forgotPasswordFormSaga } from 'Src/modules/ForgotPasswordForm';
 import { setPasswordFormSaga } from 'Src/modules/SetPasswordForm';
+import { mailSubscriptionSaga } from 'Src/modules/MailSubscription';
 import { action, request } from 'Src/utils';
 
 function* init() {
@@ -33,7 +34,8 @@ export function* rootSaga() {
     tutorialsSaga(),
     tutorialSaga(),
     forgotPasswordFormSaga(),
-    setPasswordFormSaga()
+    setPasswordFormSaga(),
+    mailSubscriptionSaga()
   ]);
 }
 
