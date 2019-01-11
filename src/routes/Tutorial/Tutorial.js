@@ -25,6 +25,7 @@ class Tutorial extends Component {
             <Markdown
               source={this.props.content}
               options={{
+                html: true,
                 linkify: true,
                 langPrefix: 'code-block language-',
                 highlight: function(str, lang) {
