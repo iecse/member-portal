@@ -3,6 +3,7 @@ import { delay } from 'redux-saga';
 import { request, action } from 'Src/utils';
 
 function* setPassword({ payload }) {
+  if (!payload.data) return;
   if (
     !payload.data.password ||
     !payload.data.token ||
